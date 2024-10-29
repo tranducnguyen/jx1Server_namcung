@@ -1,0 +1,22 @@
+**Bước 1:** Goddess
+cd /home/volam-nam-cung/jxser/gateway\r
+./goddess_y\r
+
+**Bước 2:** Bishop
+cd /home/volam-nam-cung/jxser/gateway\r
+./bishop_y\r
+
+**Bước 3:** S3relay
+cd /home/volam-nam-cung/jxser/gateway/s3relay\r
+./s3relay_y\r
+
+**Bước 4:** Game Server 1
+cd /home/volam-nam-cung/jxser/server1\r
+./jx_linux_y\r
+
+
+**Bước 5: Git Status**
+cd /home/volam-nam-cung/jxser \r git status \r
+
+**Bước 6: Update Version**
+cd /home/volam-nam-cung/jxser \r git pull \r
