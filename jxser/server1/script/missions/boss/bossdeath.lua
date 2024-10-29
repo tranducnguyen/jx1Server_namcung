@@ -82,20 +82,7 @@ function OnDeath( nNpcIndex )
 --	end;
 	--Renew boss award - Modified by DinhHQ - 20120319
 	tbDropTemplet:GiveAwardByList(nNpcIndex, PlayerIndex,%tbVnNewItemDropAward,format("killed_%s",GetNpcName(nNpcIndex)))	
-	-- Œ‰¡÷»Ÿ”˛¡Ó≈∆µÙ¬‰
-	if (GetProductRegion() == "cn" or GetProductRegion() == "cn_ib") then
-		local szNpcName = GetNpcName(nNpcIndex);
-		if (DROPRATE_BOSS_HONOURRATE[szNpcName]) then
-			for i = 1, getn(DROPRATE_BOSS_HONOURRATE[szNpcName]) do
-				local nrate = random(1, 10000);
-				if (nrate < DROPRATE_BOSS_HONOURRATE[szNpcName][i]) then
-				DropItem(world, x, y, PlayerIndex, 6, 1, HONOURID[i], 1, 0, 0, 0, 0, 0, 0, 0, 0);
-				end;
-			end;
-		end;
-	end;
-	
-	-- ∏¯…±µÙBOSSµƒ»ÀªÚ∂”ŒÈΩ±¿¯
+
 	local nTeamSize = GetTeamSize();
 	local szName;
 	

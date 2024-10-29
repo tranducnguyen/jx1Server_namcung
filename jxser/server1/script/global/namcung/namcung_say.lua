@@ -172,8 +172,8 @@ function dkgm()
 		ST_LevelUp(150 - nCurLevel)
 	end
 	SetFightState(1)
-	SetCamp(6)
-	SetCurCamp(6)
+	--SetCamp(6)
+	--SetCurCamp(6)
 	AddMagic(732, 50) --Skill GM
 	AddMagic(733, 50) --Skill GM
 	if CalcFreeItemCellCount() >= 1 then
