@@ -1,15 +1,3 @@
---支持参数是表格的CreateTaskSay 《dec》版本
---
---选项的写法
-----tbOpt = 
---{
---	[1] = { "选项名", 函数, {参数1，参数2} }，
---	[2] = { "选项名", 函数, {参数1，参数2} }
---}
-
---AskData = {函数, {参数1，参数2}}
-
-
 
 Include("\\script\\task\\system\\task_string.lua")
 
@@ -28,8 +16,9 @@ function CreateNewSayEx(szTitle, tbOpt)
 	
 	local tbSayOpt = {}
 	for i= 1, getn(tbOpt) do
-		tinsert(tbSayOpt, tbOpt[i][1].. format("/#g_DailogBack(%d)", i))
+		tinsert(tbSayOpt, tbOpt[i][1].. format("/#g_DailogBack(%d)", i));
 	end
+
 	if type(szTitle) == "number" then
 		Describe(szTitle, getn(tbSayOpt), tbSayOpt)
 	else
@@ -37,6 +26,8 @@ function CreateNewSayEx(szTitle, tbOpt)
 	end
 	
 end
+
+
 
 function g_DailogBack(nSelectId, nCount)
 	

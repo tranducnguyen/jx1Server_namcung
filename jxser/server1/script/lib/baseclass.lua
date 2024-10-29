@@ -1,8 +1,12 @@
 
-
-
-
+-- FileName: baseclass.lua
+-- FilePath: /script/lib
+-- Creator: KyoTran
+-- Date: 2024-10-29
+-- Description: table sö dông nh­ class trong OOP
+Include("\\script\\lib\\common.lua")
 tbBaseClass = {}
+
 function tbBaseClass:new(...)
 	local tb = {}
 	for k, v in self do
@@ -16,9 +20,8 @@ function tbBaseClass:new(...)
 	return tb,isOk;
 
 end
+
 function tbBaseClass:NewClass(tbClass, ...)
-	
-	
 	local tb = {}
 	for k, v in tbClass do
 		tb[k] = v
